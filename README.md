@@ -1,3 +1,14 @@
+# THIS IS A FORK, REMEMBER THAT
+* All the credits goes to the og creators,
+  love from sugaa
+
+
+![image](https://github.com/user-attachments/assets/622eb5a6-e824-4e56-a635-6424e0b42c66)
+
+
+##
+
+
 
 # Things you should know:
 * To open the menu in-game the **default key** is **"I"** or you can type **"/menu"**
