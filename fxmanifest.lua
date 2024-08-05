@@ -1,8 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'HUD for Qbox'
-repository 'https://github.com/Qbox-project/qbx_hud'
+description 'HUD for Qbox, edited by sugawy'
 version '1.0.0'
 
 ox_lib 'locale'

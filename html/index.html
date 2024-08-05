@@ -65,10 +65,10 @@
                                 <div class="q-mb-md">
                                     <div class="text-h6 q-mb-md">Reset Hud <img class="brand-logo" align="right" src="./brand-logo.svg"></img></div>
                                     <div class="q-pa-md q-gutter-sm">
-                                        <q-btn v-on:click="resetStorage($event)" :loading="progress[0].loading" :percentage="progress[0].percentage" text-color="textbutton" color="bgbutton" @click="startComputing(0)" style="width: 150px"> Reset Settings
+                                        <q-btn v-on:click="resetStorage($event)" :loading="progress[0].loading" :percentage="progress[0].percentage" text-color="textbutton" color="bgbutton" @click="startComputing(0)" style="width: 145px"> Reset Settings
                                         <template v-slot:loading> <q-spinner-gears class="on-left"></q-spinner-gears> Resetting... </template></q-btn>
                                         <div class="text-h7 q-mb-md">If you want to reset your settings back to default; click this shiny button! <br> (you will have to relog for your menu to reset changes successfully)</div>
-                                        <q-btn v-on:click="restartHud($event)" :loading="progress[1].loading" :percentage="progress[1].percentage" text-color="textbutton" color="bgbutton" @click="startComputing(1)" style="width: 150px"> Reset Hud
+                                        <q-btn v-on:click="restartHud($event)" :loading="progress[1].loading" :percentage="progress[1].percentage" text-color="textbutton" color="bgbutton" @click="startComputing(1)" style="width: 145px"> Reset Hud
                                         <template v-slot:loading> <q-spinner-gears class="on-left"></q-spinner-gears> Resetting... </template></q-btn>
                                         <div class="text-h7 q-mb-md">If your hud is acting up, give it a good ol' reset! Or you can do /resethud</div>
                                     </div>
@@ -208,100 +208,100 @@
                 <div id="playerHud" v-show="show">
                     <transition name="fade">
                     <div v-if="showVoice">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: talkingColor}" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="voice" size="50px" :thickness="0.24" :style="{color: talkingColor}" :min="0" :max="5" center-color="grey-10">
-                        <q-icon style="top: -0.5px; left: 0px;" :name="voiceIcon" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" :style="{color: talkingColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="voice" size="45px" :thickness="0.19" :style="{color: talkingColor}" :min="0" :max="5" center-color="grey-10">
+                        <q-icon style="top: -0.5px; left: 0px;" :name="voiceIcon" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showHealth">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: healthColor}" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="health" size="50px" :thickness="0.24" :style="{color: healthColor}" :min="0" :max="100" center-color="grey-10">
-                        <q-icon style="top: -0.5px; left: -0.4px;" name="fas fa-heart" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" :style="{color: healthColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="health" size="45px" :thickness="0.19" :style="{color: healthColor}" :min="0" :max="100" center-color="grey-10">
+                        <q-icon style="top: -0.5px; left: -0.4px;" name="fas fa-heart" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showArmor">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: armorColor}" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="armor" size="50px" :thickness="0.24" :style="{color: armorColor}" :min="0" :max="100" center-color="grey-10">
-                        <q-icon name="fas fa-shield-alt" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" :style="{color: armorColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="armor" size="45px" :thickness="0.19" :style="{color: armorColor}" :min="0" :max="100" center-color="grey-10">
+                        <q-icon name="fas fa-shield-alt" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showHunger">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: hungerColor}" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="hunger" size="50px" :thickness="0.24" :style="{color: hungerColor}" :min="0" :max="100" center-color="grey-10">
-                        <q-icon style="top: -1px; left: -0.5px;" name="fas fa-hamburger" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" :style="{color: hungerColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="hunger" size="45px" :thickness="0.19" :style="{color: hungerColor}" :min="0" :max="100" center-color="grey-10">
+                        <q-icon style="top: -1px; left: -0.5px;" name="fas fa-hamburger" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showThirst">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: thirstColor}" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="thirst" size="50px" :thickness="0.24" :style="{color: thirstColor}" :min="0" :max="100" center-color="grey-10">
-                        <q-icon style="top: -0.5px; left: -0.5px;" name="fas fa-tint" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" :style="{color: thirstColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="thirst" size="45px" :thickness="0.19" :style="{color: thirstColor}" :min="0" :max="100" center-color="grey-10">
+                        <q-icon style="top: -0.5px; left: -0.5px;" name="fas fa-tint" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showStress">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="stress" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="stress" size="50px" :thickness="0.24" color="stress" :min="0" :max="100" center-color="grey-10">
-                        <q-icon style="top: -0.5px; left: -0.5px;" name="fas fa-brain" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="stress" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="stress" size="45px" :thickness="0.19" color="stress" :min="0" :max="100" center-color="grey-10">
+                        <q-icon style="top: -0.5px; left: -0.5px;" name="fas fa-brain" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showOxygen">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="oxygen" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="oxygen" size="50px" :thickness="0.24" color="oxygen" :min="0" :max="100" center-color="grey-10">
-                        <q-icon style="top: -2px; left: -0.1px;" name="fas fa-lungs" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="oxygen" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="oxygen" size="45px" :thickness="0.19" color="oxygen" :min="0" :max="100" center-color="grey-10">
+                        <q-icon style="top: -2px; left: -0.1px;" name="fas fa-lungs" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showArmed">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="armed" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="static" size="50px" :thickness="0.24" color="armed" :min="0" :max="100" center-color="grey-10">
-                        <q-icon name="fas fa-stream" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="armed" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="static" size="45px" :thickness="0.19" color="armed" :min="0" :max="100" center-color="grey-10">
+                        <q-icon name="fas fa-stream" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showParachute">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="parachute" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="parachute" size="50px" :thickness="0.24" color="parachute" :min="0" :max="2" center-color="grey-10">
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="parachute" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="parachute" size="45px" :thickness="0.19" color="parachute" :min="0" :max="2" center-color="grey-10">
                         <q-icon name="fas fa-parachute-box" size="23px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showEngine">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: engineColor}" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="engine" size="50px" :thickness="0.24" :style="{color: engineColor}" :min="0" :max="100" center-color="grey-10">
-                        <q-icon style="top: -1px;" name="fas fa-oil-can" size="19.5px":style="{color: engineColor}"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" :style="{color: engineColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="engine" size="45px" :thickness="0.19" :style="{color: engineColor}" :min="0" :max="100" center-color="grey-10">
+                        <q-icon style="top: -1px;" name="fas fa-oil-can" size="19px":style="{color: engineColor}"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showHarness">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="harness" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="hp" size="50px" :thickness="0.24" color="harness" :min="0" :max="100" center-color="grey-10">
-                        <q-icon name="fas fa-user-slash" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="harness" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="hp" size="45px" :thickness="0.19" color="harness" :min="0" :max="100" center-color="grey-10">
+                        <q-icon name="fas fa-user-slash" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showCruise">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="cruise" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="speed" size="50px" :thickness="0.24" color="cruise" :min="0" :max="100" center-color="grey-10">
-                        <q-icon style="top: -1.5px;" name="fas fa-tachometer-alt-fast" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="cruise" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="speed" size="45px" :thickness="0.19" color="cruise" :min="0" :max="100" center-color="grey-10">
+                        <q-icon style="top: -1.5px;" name="fas fa-tachometer-alt-fast" size="19px" color="white"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showNos">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="nos" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="nos" size="50px" :thickness="0.24" color="nos" :min="0" :max="100" center-color="grey-10">
-                        <q-icon name="fas fa-meteor" size="19.5px" :style="{color: nosColor}"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="nos" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="nos" size="45px" :thickness="0.19" color="nos" :min="0" :max="100" center-color="grey-10">
+                        <q-icon name="fas fa-meteor" size="19px" :style="{color: nosColor}"/>
                     </div>
                     </transition>
                     <transition name="fade">
                     <div v-if="showDev">
-                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="dev" :min="0" :max="100"></q-circular-progress>
-                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="static" size="50px" :thickness="0.24" color="dev" :min="0" :max="100" center-color="grey-10">
-                        <q-icon name="fas fa-terminal" size="19.5px" color="white"/>
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="45px" :thickness="0.19" color="dev" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="static" size="45px" :thickness="0.19" color="dev" :min="0" :max="100" center-color="grey-10">
+                        <q-icon name="fas fa-terminal" size="19px" color="white"/>
                     </div>
                     </transition>
                 </div>

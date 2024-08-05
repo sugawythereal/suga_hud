@@ -38,16 +38,16 @@ div#q-loading-bar { display: none!important; } /* makes sure there's no ajax loa
 ::-webkit-scrollbar { display: none!important; } /* makes sure there's no ugly scrollbar on menu*/
 
 /* Hud radial styles */
-.text-health { color: rgb(33, 171, 97)!important; }
-.text-stress { color: rgb(255, 0, 0)!important; }
-.text-nos { color: rgb(255, 72, 133)!important; }
-.text-cruise { color: rgb(255, 72, 133)!important; }
-.text-armed { color: rgb(255, 72, 133)!important; }
-.text-harness { color: rgb(182, 72, 255)!important; }
-.text-oxygen { color: rgb(138, 168, 189)!important; }
-.text-parachute { color: rgb(0, 0, 0)!important; }
-.text-dev { color: rgb(0, 0, 0)!important; }
-.text-gauge { color: rgb(255, 255, 255)!important; }
+.text-health { color: rgb(245, 159, 0)!important; }
+.text-stress { color: rgb(245, 159, 0)!important; }
+.text-nos { color: rgb(245, 159, 0)!important; }
+.text-cruise { color: rgb(245, 159, 0)!important; }
+.text-armed { color: rgb(245, 159, 0)!important; }
+.text-harness { color: rgb(245, 159, 0)!important; }
+.text-oxygen { color: rgb(245, 159, 0)!important; }
+.text-parachute { color: rgb(245, 159, 0)!important; }
+.text-dev { color: rgb(245, 159, 0)!important; }
+.text-gauge { color: rgb(245, 159, 0)!important; }
 
 #main-container {
   width: 100%;
@@ -95,21 +95,31 @@ div#q-loading-bar { display: none!important; } /* makes sure there's no ajax loa
 
 /* Player HUD */
 
-#playerhud {
+/* #playerhud {
   position: absolute;
   display: flex;
   left: 3vh;
   bottom: 0.2vw;
+} */
+
+#playerhud {
+  position: absolute;
+  left: 0;
+  width: 102%;
+  bottom: 0.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .q-ml-xl {
-  margin-left: -22px!important; /* Change this to space radials */
+  margin-left: -17px!important; /* Change this to space radials */
 }
 
 /* Vehicle HUD */
 
 speed:after {
-  content: "MPH"; /* If using KPH change this content from MPH */
+  content: "KPH"; /* If using KPH change this content from MPH */
   display: block;
   padding-top: 3px;
   padding-left: 2px;
