@@ -779,7 +779,7 @@ const playerHud = {
         this.showHealth = true;
       } 
       if (data.playerDead === false) {
-        this.healthColor = "#f59f00";
+        this.healthColor = "#3FA554";
       } else {
         this.healthColor = "#ff0000";
         this.health = 100;
@@ -798,7 +798,7 @@ const playerHud = {
       if (data.armor <= 0) {
         this.armorColor = "#FF0000";
       } else {
-        this.armorColor = "#f59f00";
+        this.armorColor = "#326dbf";
       }
 
       if (data.dynamicHunger == true) {
@@ -811,11 +811,11 @@ const playerHud = {
         this.showHunger = true;
       } 
       if (data.hunger >= 100) {
-        this.hungerColor = "#f59f00";
+        this.hungerColor = "#dd6e14";
       } else if(data.hunger <= 30){
         this.hungerColor = "#ff0000";
       } else{
-        this.hungerColor = "#f59f00";
+        this.hungerColor = "#dd6e14";
       }
 
       if (data.dynamicThirst == true) {
@@ -828,11 +828,11 @@ const playerHud = {
         this.showThirst = true;
       } 
       if (data.thirst >= 100) {
-        this.thirstColor = "#f59f00";
+        this.thirstColor = "#1a7cad";
       } else if(data.thirst <= 30){
         this.thirstColor = "#ff0000";
       } else{
-        this.thirstColor = "#f59f00";
+        this.thirstColor = "#1a7cad";
       }
 
       if (data.dynamicStress == true) {
@@ -891,9 +891,9 @@ const playerHud = {
       if (data.talking && data.radio) {
         this.talkingColor = "#D64763";
       } else if (data.talking) {
-        this.talkingColor = '#FFFF3E';
+        this.talkingColor = '#7c00cb';
       } else {
-        this.talkingColor = "#f59f00";
+        this.talkingColor = "#FFFFFF";
       }
       if (data.radio != 0 && data.radio != undefined) {
         this.voiceIcon = 'fas fa-headset';

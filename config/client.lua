@@ -1,12 +1,12 @@
 return {
-    menuKey = 'I', -- Key to open the HUD menu
+    menuKey = '', -- Key to open the HUD menu
     useMPH = false, -- If true, speed math will be done as MPH, if false KPH will be used (YOU HAVE TO CHANGE CONTENT IN STYLES.CSS TO DISPLAY THE CORRECT TEXT)
 
     stress = {
-        chance = 0.1, -- Percentage stress chance when shooting (0-1)
-        minForShaking = 50, -- Minimum stress level for screen shaking
+        chance = 0, -- Percentage stress chance when shooting (0-1)
+        minForShaking = 1000, -- Minimum stress level for screen shaking
         minForSpeeding = 1000, -- Minimum stress level for speeding while buckled
-        minForSpeedingUnbuckled = 50, -- Minimum stress level for speeding while unbuckled
+        minForSpeedingUnbuckled = 100, -- Minimum stress level for speeding while unbuckled
         whitelistedWeapons = { -- Weapons which don't give stress
             `weapon_petrolcan`,
             `weapon_hazardcan`,

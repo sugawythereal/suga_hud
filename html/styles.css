@@ -18,8 +18,8 @@ div#openmenu { display: none; position: absolute; width: 50%; top: 45%; left: 50
 .text-h7 { color: rgba(255, 255, 255, 0.8)!important; }
 
 /* Menu buttons & checkboxes & toggle switch icons styles */
-.text-textbutton { color: rgb(0, 0, 0)!important; }
-.bg-bgbutton { background: rgba(241, 229, 66, 0.651)!important; }
+.text-textbutton { color: rgba(59, 0, 136, 0.726)!important; }
+.bg-bgbutton { background: rgba(59, 0, 136, 0.726)!important; }
 .q-checkbox__inner { color: rgb(255 255 255 / 70%)!important; }
 .text-checkbox { color: rgba(241, 229, 66, 0.651)!important; }
 .q-checkbox__svg { color: rgb(0, 0, 0)!important; }
@@ -38,16 +38,16 @@ div#q-loading-bar { display: none!important; } /* makes sure there's no ajax loa
 ::-webkit-scrollbar { display: none!important; } /* makes sure there's no ugly scrollbar on menu*/
 
 /* Hud radial styles */
-.text-health { color: rgb(245, 159, 0)!important; }
-.text-stress { color: rgb(245, 159, 0)!important; }
-.text-nos { color: rgb(245, 159, 0)!important; }
-.text-cruise { color: rgb(245, 159, 0)!important; }
-.text-armed { color: rgb(245, 159, 0)!important; }
-.text-harness { color: rgb(245, 159, 0)!important; }
-.text-oxygen { color: rgb(245, 159, 0)!important; }
-.text-parachute { color: rgb(245, 159, 0)!important; }
-.text-dev { color: rgb(245, 159, 0)!important; }
-.text-gauge { color: rgb(245, 159, 0)!important; }
+.text-health { color: rgb(33, 171, 97)!important; }
+.text-stress { color: rgb(255, 0, 0)!important; }
+.text-nos { color: rgb(255, 72, 133)!important; }
+.text-cruise { color: rgb(255, 72, 133)!important; }
+.text-armed { color: rgb(255, 72, 133)!important; }
+.text-harness { color: rgb(182, 72, 255)!important; }
+.text-oxygen { color: rgb(138, 168, 189)!important; }
+.text-parachute { color: rgb(0, 0, 0)!important; }
+.text-dev { color: rgb(0, 0, 0)!important; }
+.text-gauge { color: rgb(255, 255, 255)!important; }
 
 #main-container {
   width: 100%;
